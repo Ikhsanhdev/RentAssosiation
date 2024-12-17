@@ -40,15 +40,15 @@ public class AuthController : Controller
       User user = (User)response.Response!;
       /* Config Cookies */
       var userClaims = new List<Claim>()
-        {
-            new Claim("Username", user.Username!),
-            new Claim("UserId", user.Id.ToString()),
-            new Claim("Name", user.Name),
-            new Claim("Phone", user.Phone!),
-            new Claim("IPAddress", HttpContext.Connection.RemoteIpAddress?.ToString() ?? ""),
-            new Claim("Email", user.Email ?? ""),
-            new Claim("LastLogin", Convert.ToDateTime(user.LastLogin).ToString("yyyy-MM-dd H:mm:ss")),
-        };
+      {
+          new Claim("Username", user.Username ?? ""),
+          new Claim("UserId", user.Id.ToString() ?? ""),
+          new Claim("Name", user.Name ?? ""),
+          new Claim("Phone", user.Phone ?? ""),
+          new Claim("IPAddress", HttpContext.Connection.RemoteIpAddress?.ToString() ?? ""),
+          new Claim("Email", user.Email ?? ""),
+          new Claim("LastLogin", user.LastLogin != null ? Convert.ToDateTime(user.LastLogin).ToString("yyyy-MM-dd H:mm:ss") : "")
+      };
 
       CookieOptions options = new CookieOptions();
       options.Expires = DateTime.Now.AddHours(5);
@@ -63,9 +63,11 @@ public class AuthController : Controller
     }
     catch (System.Exception ex)
     {
-      return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-    }
+        // Log the exception details to console or logging provider
+        Console.WriteLine($"Exception in Login: {ex.Message} \n {ex.StackTrace}");
 
+        return StatusCode(StatusCodes.Status500InternalServerError, new { Message = ex.Message, StackTrace = ex.StackTrace });
+    }
   }
 
   public async Task<IActionResult> Logout()

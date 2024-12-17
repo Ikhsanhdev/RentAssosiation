@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using RentAssosiasi.Helpers
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -6,7 +8,7 @@
     <title>@ViewData["Title"] - RentAssosiation</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/RentAssosiation.styles.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/RentAssosiation.styles.css" asp-append-version="true" /> *@
 
     <link href="~/assets/img/favicon.png" rel="icon">
     <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -61,7 +63,11 @@
                         </ul>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="contact.html">LOGIN</a></li>
+                    @if (string.IsNullOrEmpty(ClaimIdentity.Username)) {
+                        <li><a href="/Auth/Login">LOGIN</a></li>
+                    } else {
+                        <li><a href="#">ADMIN</a></li>
+                    }
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -162,6 +168,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/pages/global.min.js" asp-append-version="true"></script>
 
     <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="~/assets/vendor/php-email-form/validate.js"></script>

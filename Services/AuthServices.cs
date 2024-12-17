@@ -51,13 +51,15 @@ namespace RentAssosiasi.Services
         response.Message = "Login is success";
         response.Response = user;
         return response;
-      }
-      catch (System.Exception)
+      } 
+      catch (System.Exception ex)
       {
-        response.Code = 500;
-        response.Message = "Login Error";
-      }
+          // Log the exception
+          Console.WriteLine($"Exception in VerifyLogin: {ex.Message} \n {ex.StackTrace}");
 
+          response.Code = 500;
+          response.Message = $"Login Error: {ex.Message}"; // Temporary for debugging
+      }
       return response;
     }
   }
