@@ -53,7 +53,7 @@ public class AuthController : Controller
       CookieOptions options = new CookieOptions();
       options.Expires = DateTime.Now.AddHours(5);
 
-      var grandmaIdentity = new ClaimsIdentity(userClaims, "AmeroroCookiesAuth");
+      var grandmaIdentity = new ClaimsIdentity(userClaims, "RentAssosiasiCookiesAuth");
       var userPrincipal = new ClaimsPrincipal([grandmaIdentity]);
       await HttpContext.SignInAsync("CookieAuthentication", userPrincipal);
       user.Password = "********";
