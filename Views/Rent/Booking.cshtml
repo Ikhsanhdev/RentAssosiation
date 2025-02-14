@@ -1,0 +1,28 @@
+@{
+    Layout = "~/Views/Shared/_LayoutRent.cshtml";
+    ViewData["Title"] = "Ayora Rent Car";
+}
+
+@section Styles {
+    <style>
+        body {
+            margin: 0;            /* Reset default margin */
+        }
+        iframe {
+            display: block;       /* iframes are inline by default */
+            background: #ffff;
+            border: none;         /* Reset default border */
+            height: 140vh;        /* Viewport-relative units */
+            width: 100vw;
+        }
+    </style>
+}
+
+<section id="booking" class="booking section">
+    <br><br>
+    <div class="section-title" data-aos="fade-up">
+        <h2>Form Booking Rental<br></h2>
+    </div>
+
+    <iframe src="https://whatsform.com/g358zm"></iframe>
+</section>

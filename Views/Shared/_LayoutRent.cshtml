@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Rent A Car</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/cateringAndRent.styles.css" asp-append-version="true" /> *@
+
+    <!-- start css template catering -->
+    <link rel="shortcut icon" href="~/favicon.ico">
+    <link rel="icon" href="~/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Vendor CSS Files -->
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/assets/css/main_rent.css" rel="stylesheet">
+
+    <!-- end -->
+</head>
+<body>
+    <header id="header" class="header fixed-top">
+        <div class="branding d-flex align-items-cente">
+            <div class="container position-relative d-flex align-items-center justify-content-between">
+                <a href="/" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                    <h1 class="sitename">Ayora</h1>
+                    <span>.</span>
+                </a>
+
+                <nav id="navmenu" class="navmenu">
+                    <ul>
+                        <li><a href="#hero" class="">Home<br></a></li>
+                        @* <li><a href="#about">About</a></li> *@
+                        <li><a href="#card-catalog">Services</a></li>
+                        @* <li><a href="blog.html">Blog</a></li> *@
+                        <li><a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)">Call Us</a></li>
+                        <li><a href="#footer-main">Contact</a></li>
+                    </ul>
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav>
+                <div class="button-group">
+                    <a href="/Rent/Booking" class="btn btn-primary btn-book">Booking</a>
+                    <a href="/Catering" class="btn btn-primary btn-catering">Catering</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    @* <div class="container"> *@
+        <main class="main">
+            @RenderBody()
+        </main>
+    @* </div> *@
+
+    <footer id="footer-main" class="footer-main">
+        <div class="container">
+            <div class="row gy-3">
+                <div class="col-lg-6 col-md-6 d-flex align-items-start">
+                    <i class="bi bi-geo-alt icon"></i>
+                    <img src="~/assets/img/qr-code.png" alt="" width="150px" height="150px" style="margin-right: 10px; margin-bottom: 10px;">
+                    <div>
+                        <h4>Address</h4>
+                        <p>
+                            Bubulak Sauyunan No. 20B RT/RW: 005/008 Kel. Tanjungpura<br>
+                            Kec. Karawang Barat Kab. Karawang Jawa Barat 41316<br>
+                        </p><br>
+                        <p>
+                            <a href="@Html.Raw("https://www.google.com/maps/place/AYORA+RENTAL+MOBIL+KARAWANG/@-6.294446,107.2932676,15z/data=!4m6!3m5!1s0x2e6977f95719f2f3:0xf204c0d5f4cfedf1!8m2!3d-6.294446!4d107.2932676!16s%2Fg%2F11sw1m19r9?entry=ttu")" style="color: #f85a40; text-decoration: underline;" target="_blank">Check at Google map</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-start">
+                    <i class="bi bi-telephone icon"></i>
+                    <div>
+                        <h4>Reservations</h4>
+                        <p>
+                            <strong>Phone:</strong> +6281263080301<br>
+                            <strong>Email:</strong> Ayoraputrasekawan@gmail.com<br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-start">
+                    <i class="bi bi-clock icon"></i>
+                    <div>
+                        <h4>Opening Hours</h4>
+                        <p>
+                            <strong>Open 24 Hours</strong><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Ayora Putra Sekawan</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+            </div>
+        </div>
+    </footer>
+
+    <div id="wa" class="wa__widget_container">
+        <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" target="_blank" class="wa__btn_popup">
+            <img src="~/assets/img/social.png" alt="WhatsApp Icon">
+            Hubungi Kami di WhatsApp
+        </a>
+    </div>
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <div id="preloader"></div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- start js template catering -->
+
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/vendor/aos/aos.js"></script>
+    <script src="~/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/assets/vendor/php-email-form/validate.js"></script>
+    <script src="~/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/assets/js/main_rent.js"></script>
+
+    <!-- end -->
+    @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("Styles", required: false)
+</body>
+</html>

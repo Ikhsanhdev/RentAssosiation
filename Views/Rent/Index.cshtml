@@ -1,0 +1,574 @@
+@{
+    Layout = "~/Views/Shared/_LayoutRent.cshtml";
+    ViewData["Title"] = "Ayora Rent Car";
+}
+
+@section Styles {
+    <style>
+        .stats-item {
+            display: flex;
+            align-items: center; /* Align items vertically */
+        }
+        .stats-item i {
+            font-size: 2rem; /* Adjust the size as needed */
+            margin-right: 10px; /* Optional: Add some space between the icon and the text */
+        }
+
+        .faq-content {
+            padding: 0 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-active .faq-content {
+            max-height: 1000px; /* Large enough to accommodate the content */
+            padding: 10px;
+        }
+
+        .faq-active {
+            height: 350px;
+        }
+    </style>
+}
+
+<section id="hero" class="hero section">
+    <div class="container position-relative container-hero" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-5 justify-content-between">
+            <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                <h2><span>Sewa & Rental </span><span class="accent">Mobil</span></h2>
+                <p>Rental Mobil Harian, Mingguan, Maupun Bulanan?</p>
+                <div class="d-flex">
+                    <a href="#card-catalog" class="btn-get-started btn-book">Pricelist</a>
+                    @* <a href="#faq" class="glightbox btn-watch-video d-flex align-items-center"><span>Persyaratan</span></a> *@
+                    <a href="#faq" class="btn-watch-video d-flex align-items-center"><span>Persyaratan</span></a>
+                </div>
+            </div>
+            <div class="col-lg-5 order-1 order-lg-2">
+                <img src="assets/img/hero-img.svg" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="icon-boxes position-relative" data-aos="fade-up" data-aos-delay="200">
+        <div class="container position-relative">
+          <div class="row gy-4 mt-5">
+                <div class="col-xl-3 col-md-6">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-telephone"></i></div>
+                        <h4 class="title"><a href="" class="stretched-link">Hotline</a></h4>
+                        <p>Kami Siap membantu untuk memenuhi semua kebutuhan layanan transportasi Anda. Hubungi <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" style="color: #f85a40; text-decoration: underline;">0812-6308-0301</a> untuk pusat bantuan, informasi, maupun pemesanan.</p>
+                    </div>
+                </div><!--End Icon Box -->
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                        <h4 class="title"><a href="" class="stretched-link">Area Layanan</a></h4>
+                        <p>Booking kendaraan jadi lebih mudah dengan dukungan jaringan luas yang tersebar di 5 Kabupaten/Kota Besar di Indonesia.</p>
+                    </div>
+                </div><!--End Icon Box -->
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-shield-lock"></i></div>
+                        <h4 class="title"><a href="" class="stretched-link">Proteksi</a></h4>
+                        <p>Demi ketenangan & rasa aman selama perjalanan, kami melindungi Anda dengan proteksi asuransi & jaminan kondisi armada yang selalu prima.</p>
+                    </div>
+                </div><!--End Icon Box -->
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-car-front"></i></div>
+                        <h4 class="title"><a href="" class="stretched-link">Jenis & Type</a></h4>
+                        <p>Penuhi kebutuhan perjalanan Anda dengan berbagai macam jenis kendaraan di PT Ayora Putra Sekawan. Mulai dari city car, SUV, LMPV, Sedan, dll.</p>
+                    </div>
+                </div><!--End Icon Box -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="card-catalog" class="services section">
+    <div class="container section-title" data-aos="fade-up">
+        <h2>List Unit Kami<br></h2>
+    </div>
+    <div class="container">
+        <div class="row gy-4" style="margin-bottom: 10px;">
+            <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="card" style="width: 20rem; margin-left: 50px;">
+                    <img class="card-img-top" src="~/assets/img/car-catalog/agya.jpg" alt="Card image cap" style="height: 180px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Agya</h5>
+                        @* <h6 class="card-subtitle mb-2 text-muted">Start from 300k/day</h6> *@
+                        @* <p class="card-text">
+                            <ul>
+                                <li>Fullday: 300k/day</li>
+                                <li>+ Driver: 450k/day</li>
+                                <li>+ Driver + Bensin: 600k/day</li>
+                                <li>Bulanan: <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" style="color: #4d90fe;">Hubungi Marketing</a></li>
+                            </ul>
+                        </p> *@
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-key"></i> City Car</li>
+                        <li class="list-group-item"><i class="fas fa-gas-pump"></i> Bensin</li>
+                        <li class="list-group-item"><i class="fas fa-person"></i> 4 person</li>
+                        <li class="list-group-item"><i class="fas fa-gear"></i> Otomatis/Manual</li>
+                    </ul>
+                    <div class="card-body">
+                        @* <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" class="btn btn-primary btn-book">Booking</a> *@
+                        <a href="/Rent/Booking" class="btn btn-primary btn-book">Booking</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="card" style="width: 20rem; margin-left: 50px;">
+                    <img class="card-img-top" src="~/assets/img/car-catalog/avanza.jpg" alt="Card image cap" style="height: 180px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Avanza</h5>
+                        @* <h6 class="card-subtitle mb-2 text-muted">Start from 400k/day</h6>
+                        <p class="card-text">
+                            <ul>
+                                <li>Fullday: 400k/day</li>
+                                <li>+ Driver: 550k/day</li>
+                                <li>+ Driver + Bensin: 700k/day</li>
+                                <li>Bulanan: <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" style="color: #4d90fe;">Hubungi Marketing</a></li>
+                            </ul>
+                        </p> *@
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-key"></i> City Car</li>
+                        <li class="list-group-item"><i class="fas fa-gas-pump"></i> Bensin</li>
+                        <li class="list-group-item"><i class="fas fa-person"></i> 7 person</li>
+                        <li class="list-group-item"><i class="fas fa-gear"></i> Otomatis/Manual</li>
+                    </ul>
+                    <div class="card-body">
+                        @* <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" class="btn btn-primary btn-book">Booking</a> *@
+                        <a href="/Rent/Booking" class="btn btn-primary btn-book">Booking</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="card" style="width: 20rem; margin-left: 50px;">
+                    <img class="card-img-top" src="~/assets/img/car-catalog/xenia.png" alt="Card image cap" style="height: 180px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Daihatsu Xenia</h5>
+                        @* <h6 class="card-subtitle mb-2 text-muted">Start from 400k/day</h6>
+                        <p class="card-text">
+                            <ul>
+                                <li>Fullday: 400k/day</li>
+                                <li>+ Driver: 550k/day</li>
+                                <li>+ Driver + Bensin: 700k/day</li>
+                                <li>Bulanan: <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" style="color: #4d90fe;">Hubungi Marketing</a></li>
+                            </ul>
+                        </p> *@
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-key"></i> City Car</li>
+                        <li class="list-group-item"><i class="fas fa-gas-pump"></i> Bensin</li>
+                        <li class="list-group-item"><i class="fas fa-person"></i> 7 person</li>
+                        <li class="list-group-item"><i class="fas fa-gear"></i> Otomatis/Manual</li>
+                    </ul>
+                    <div class="card-body">
+                        @* <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" class="btn btn-primary btn-book">Booking</a> *@
+                        <a href="/Rent/Booking" class="btn btn-primary btn-book">Booking</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="card" style="width: 20rem; margin-left: 50px;">
+                    <img class="card-img-top" src="~/assets/img/car-catalog/alphard.jpg" alt="Card image cap" style="height: 180px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Alphard</h5>
+                        @* <h6 class="card-subtitle mb-2 text-muted">Start from 3jt/day</h6>
+                        <p class="card-text">
+                            <ul>
+                                <li>Fullday: 3jt/day</li>
+                                <li>+ Driver: 3,2/day</li>
+                                <li>+ Driver + Bensin: 3,4/day</li>
+                                <li>Bulanan: <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" style="color: #4d90fe;">Hubungi Marketing</a></li>
+                            </ul>
+                        </p> *@
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-key"></i> MPV</li>
+                        <li class="list-group-item"><i class="fas fa-gas-pump"></i> Bensin</li>
+                        <li class="list-group-item"><i class="fas fa-person"></i> 7 person</li>
+                        <li class="list-group-item"><i class="fas fa-gear"></i> Matic</li>
+                    </ul>
+                    <div class="card-body">
+                        @* <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" class="btn btn-primary btn-book">Booking</a> *@
+                        <a href="/Rent/Booking" class="btn btn-primary btn-book">Booking</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row gy-4">
+            <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="card" style="width: 20rem; margin-left: 50px;">
+                    <img class="card-img-top" src="~/assets/img/car-catalog/rush.jpg" alt="Card image cap" style="height: 180px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Rush</h5>
+                        @* <h6 class="card-subtitle mb-2 text-muted">Start from 500k/day</h6>
+                        <p class="card-text">
+                            <ul>
+                                <li>Fullday: 500k/day</li>
+                                <li>+ Driver: 650k/day</li>
+                                <li>+ Driver + Bensin: 750k/day</li>
+                                <li>Bulanan: <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" style="color: #4d90fe;">Hubungi Marketing</a></li>
+                            </ul>
+                        </p> *@
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-key"></i> LMPV</li>
+                        <li class="list-group-item"><i class="fas fa-gas-pump"></i> Bensin</li>
+                        <li class="list-group-item"><i class="fas fa-person"></i> 7 person</li>
+                        <li class="list-group-item"><i class="fas fa-gear"></i> Manual</li>
+                    </ul>
+                    <div class="card-body">
+                        @* <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" class="btn btn-primary btn-book">Booking</a> *@
+                        <a href="/Rent/Booking" class="btn btn-primary btn-book">Booking</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="card" style="width: 20rem; margin-left: 50px;">
+                    <img class="card-img-top" src="~/assets/img/car-catalog/innova-zenix.jpg" alt="Card image cap" style="height: 180px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Innova Zenix</h5>
+                        @* <h6 class="card-subtitle mb-2 text-muted">Start from 800k/day</h6>
+                        <p class="card-text">
+                            <ul>
+                                <li>Fullday: 800k/day</li>
+                                <li>+ Driver: 950k/day</li>
+                                <li>+ Driver + Bensin: 1.050k/day</li>
+                                <li>Bulanan: <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" style="color: #4d90fe;">Hubungi Marketing</a></li>
+                            </ul>
+                        </p> *@
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-key"></i> MPV</li>
+                        <li class="list-group-item"><i class="fas fa-gas-pump"></i> Bensin/Diesel</li>
+                        <li class="list-group-item"><i class="fas fa-person"></i> 7 person</li>
+                        <li class="list-group-item"><i class="fas fa-gear"></i> Otomatis/Manual</li>
+                    </ul>
+                    <div class="card-body">
+                        @* <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" class="btn btn-primary btn-book">Booking</a> *@
+                        <a href="/Rent/Booking" class="btn btn-primary btn-book">Booking</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="card" style="width: 20rem; margin-left: 50px;">
+                    <img class="card-img-top" src="~/assets/img/car-catalog/fortuner.jpg" alt="Card image cap" style="height: 180px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Fortuner</h5>
+                        @* <h6 class="card-subtitle mb-2 text-muted">Start from 1.500k/day</h6>
+                        <p class="card-text">
+                            <ul>
+                                <li>Fullday: 1.500k/day</li>
+                                <li>+ Driver: 1.650k/day</li>
+                                <li>+ Driver + Bensin: 1.750k/day</li>
+                                <li>Bulanan: <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" style="color: #4d90fe;">Hubungi Marketing</a></li>
+                            </ul>
+                        </p> *@
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-key"></i> SUV</li>
+                        <li class="list-group-item"><i class="fas fa-gas-pump"></i> Diesel</li>
+                        <li class="list-group-item"><i class="fas fa-person"></i> 7 person</li>
+                        <li class="list-group-item"><i class="fas fa-gear"></i> Otomatis</li>
+                    </ul>
+                    <div class="card-body">
+                        @* <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" class="btn btn-primary btn-book">Booking</a> *@
+                        <a href="/Rent/Booking" class="btn btn-primary btn-book">Booking</a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="card" style="width: 20rem; margin-left: 50px;">
+                    <img class="card-img-top" src="~/assets/img/car-catalog/innova-reborn.jpg" alt="Card image cap" style="height: 180px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Innova Reborn</h5>
+                        @* <h6 class="card-subtitle mb-2 text-muted">Start from 800k/day</h6>
+                        <p class="card-text">
+                            <ul>
+                                <li>Fullday: 800k/day</li>
+                                <li>+ Driver: 950k/day</li>
+                                <li>+ Driver + Bensin: 1.050k/day</li>
+                                <li>Bulanan: <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" style="color: #4d90fe;">Hubungi Marketing</a></li>
+                            </ul>
+                        </p> *@
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-key"></i> MPV</li>
+                        <li class="list-group-item"><i class="fas fa-gas-pump"></i> Bensin/Diesel</li>
+                        <li class="list-group-item"><i class="fas fa-person"></i> 7 person</li>
+                        <li class="list-group-item"><i class="fas fa-gear"></i> Matic/Manual</li>
+                    </ul>
+                    <div class="card-body">
+                        @* <a href="https://wa.me/6281263080301?text=tanya%20rental%20(web)" class="btn btn-primary btn-book">Booking</a> *@
+                        <a href="/Rent/Booking" class="btn btn-primary btn-book">Booking</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <center><a href="#" class="btn btn-outline-primary btn-lihat-unit">Lihat Semua Unit</a></center>
+    </div>
+</section>
+
+<section id="stats" class="stats section">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Layanan Kami<br></h2>
+        </div>
+        <div class="row gy-4 align-items-center">
+            <div class="col-lg-12">
+                <div class="row gy-4">
+                    <div class="col-lg-6">
+                        <div class="stats-item d-flex">
+                            <i class="bi bi-car-front flex-shrink-0"></i>
+                            <div>
+                                <h5><strong>Short Term Rental</strong></h5>
+                                <p>Penuhi dan tentukan kebutuhan unit untuk perjalanan Anda dengan layanan rental mobil harian kami.</p>
+                            </div>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-6">
+                        <div class="stats-item d-flex">
+                            <i class="bi bi-calendar flex-shrink-0"></i>
+                            <div>
+                                <h5><strong>Long Term Rental</strong></h5>
+                                <p>Harga spesial untuk Anda yang ingin menyewa dalam jangka panjang, rental mobil bulanan, hingga tahunan.</p>
+                            </div>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-6">
+                        <div class="stats-item d-flex">
+                            <i class="bi bi-people flex-shrink-0"></i>
+                            <div>
+                                <h5><strong>Wedding Car</strong></h5>
+                                <p>Buat momen pernikahan lebih berkesan dengan layanan Wedding Car kami. Tersedia banyak jenis kendaraan siap rental.</p>
+                            </div>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-6">
+                        <div class="stats-item d-flex">
+                            <i class="bi bi-bus-front flex-shrink-0"></i>
+                            <div>
+                                <h5><strong>Tour & Travel</strong></h5>
+                                <p>Jalan-jalan hemat ditemani oleh driver profesional kami. Rasakan kenyamanan dalam perjalanan Anda.</p>
+                            </div>
+                        </div>
+                    </div><!-- End Stats Item -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="faq section">
+    <div class="section-title" data-aos="fade-up">
+        <h2>Persyaratan<br></h2>
+        <p>Pastikan persyaratan Anda sudah lengkap sebelum menggunakan layanan rental mobil kami.</p>
+    </div>
+
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <center><h5><strong>Perusahaan</strong></h5></center><br>
+                <div class="faq-container">
+                    <div class="faq-item faq-active">
+                        <h6><span style="color: #4d90fe;">Lepas Kunci Harian, Mingguan</span></h6>
+                        <div class="faq-content">
+                            <p>Syarat menggunakan layanan rental mobil bulanan untuk perusahaan:</p>
+                            <p>
+                                <ul>
+                                    <li>Softcopy Akta Perusahaan</li>
+                                    <li>NIB (Nomor Induk Berusaha)</li>
+                                    <li>NPWP Perusahaan</li>
+                                    <li>Domisili Perusahaan</li>
+                                </ul>
+                            </p>
+                            <p>Identitas Penyewa:</p>
+                            <p>
+                                <ul>
+                                    <li>KTP Penyewa</li>
+                                    <li>KTP Penjamin dari Perusahaan</li>
+                                    <li>SIM Pengguna Kendaraan</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+
+                    <div class="faq-item">
+                        <h6><span style="color: #4d90fe;">Lepas Kunci Bulanan</span></h6>
+                        <div class="faq-content">
+                            <p>Syarat menggunakan layanan rental mobil bulanan untuk perusahaan:</p>
+                            <p>
+                                <ul>
+                                    <li>Softcopy Akta Perusahaan</li>
+                                    <li>NIB (Nomor Induk Berusaha)</li>
+                                    <li>NPWP Perusahaan</li>
+                                    <li>Domisili Perusahaan</li>
+                                </ul>
+                            </p>
+                            <p>Identitas Penyewa:</p>
+                            <p>
+                                <ul>
+                                    <li>KTP Penyewa</li>
+                                    <li>KTP Penjamin dari Perusahaan</li>
+                                    <li>SIM Pengguna Kendaraan</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <center><h5><strong>Perorangan</strong></h5></center><br>
+                <div class="faq-container">
+                    <div class="faq-item faq-active">
+                        <h6><span style="color: #4d90fe;">Lepas Kunci Harian</span></h6>
+                        <div class="faq-content">
+                            <p>Syarat menggunakan layanan Rental Mobil adalah dengan melengkapi dokumen sebagai berikut:</p>
+                            <p>
+                                <ul>
+                                    <li>Mengisi form</li>
+                                    <li>Menyerahkan
+                                        <ul>
+                                            <li>Dokumen Penyewa (fc KTP, fc SIM A & fc KK/Buku Nikah)</li>
+                                            <li>Dokumen fc Penjamin (fc KTP)</li>
+                                        </ul>
+                                    </li>
+                                    <li>Jaminan yang diserahkan kepada kami:
+                                        <ul>
+                                            <li>Kendaraan (motor+STNK) minimal tahun 2020, atau</li>
+                                            <li>Deposit minimal Rp 3 juta</li>
+                                        </ul>
+                                    </li>
+                                    <li>Bersedia disurvei (khusus pelanggan baru)</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+
+                    <div class="faq-item">
+                        <h6><span style="color: #4d90fe;">Lepas Kunci Bulanan</span></h6>
+                        <div class="faq-content">
+                            <p>Syarat menggunakan layanan Rental Mobil adalah dengan melengkapi dokumen sebagai berikut:</p>
+                            <p>
+                                <ul>
+                                    <li>Mengisi form</li>
+                                    <li>Menyerahkan
+                                        <ul>
+                                            <li>Dokumen Penyewa (fc KTP, fc SIM A & fc KK/Buku Nikah)</li>
+                                            <li>Dokumen fc Penjamin (fc KTP)</li>
+                                        </ul>
+                                    </li>
+                                    <li>Jaminan yang diserahkan kepada kami:
+                                        <ul>
+                                            <li>Kendaraan (motor+STNK) minimal tahun 2020, atau</li>
+                                            <li>Deposit minimal Rp 3 juta</li>
+                                        </ul>
+                                    </li>
+                                    <li>Bersedia disurvei (khusus pelanggan baru)</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br><br>
+
+    <div class="section-title" data-aos="fade-up">
+        <h4>Syarat & Ketentuan<br></h4>
+    </div>
+
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+                 <div class="faq-container">
+                    <div class="faq-item faq-active">
+                        <h6><span style="color: #4d90fe;">Lepas Kunci</span></h6>
+                        <div class="faq-content">
+                            <p>Syarat dan Ketentuan:</p>
+                            <p>
+                                <ul>
+                                    <li>Waktu Reservasi minimal (H-1) </li>
+                                    <li>Durasi paket Layanan rental mobil harian lepas kunci (self drive) yang dapat Anda pilih adalah 12 jam, Fullday (04.00 - 24.00) & 24 jam</li>
+                                    <li>Harga Belum termasuk biaya antar & jemput mobil.</li>
+                                    <li>Anda harus mengembalikan mobil ke pool Ayora sesuai dengan jam pengembalian yang sudah ditentukan.  Jika waktu keterlambatan melebihi batas waktu pengembalian, Anda akan dikenakan biaya tambahan (overtime).</li>
+                                    <li>Jika Anda tidak bisa mengantarkan mobil tersebut ke pool Ayora, Anda dapat mengajukan permintaan penjemputan mobil. Kami akan mengambil unit ke tempat yang telah disepakati, dengan tambahan biaya yang ditentukan oleh jarak dari titik penjemputan. Kami akan menginformasikan jumlah biaya tersebut sebelum Anda memutuskan menggunakan layanan penjemputan unit.</li>
+                                    <li>Harga yang tercantum di website ini tidak berlaku untuk periode High Season & hari raya besar.</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+
+                    <div class="faq-item">
+                        <h6><span style="color: #4d90fe;">Pembayaran</span></h6>
+                        <div class="faq-content">
+                            <p>Kebijakan Pembayaran Sewa Mobil Harian</p>
+                            <p>
+                                <ul>
+                                    <li>Pemakaian untuk hari H berlaku sistem pembayaran Full Payment. </li>
+                                    <li>Pemakaian untuk hari berikutnya (next day) berlaku DP min. 50% dan pelunasan dilakukan saat hari pemakaian.</li>
+                                </ul>
+                            </p>
+                            <p>Pembayaran harus dilakukan sebelum penyewaan dilakukan dengan cara Transfer Bank ke rekening dengan nama yang tertera atas PT AYORA PUTRA SEKAWAN</p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+
+                    <div class="faq-item">
+                        <h6><span style="color: #4d90fe;">Overtime</span></h6>
+                        <div class="faq-content">
+                            <p>Kebijakan Kelebihan Waktu Sewa (Overtime)</p>
+                            <p>
+                                <ul>
+                                    <li>Biaya overtime sebesar 10% / jam dari harga sewa perhari sesuai durasi sewa yang dipilih. </li>
+                                    <li>Biaya overtime sebesar 100% jika overtime lebih dari > 6 jam.</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+
+                    <div class="faq-item">
+                        <h6><span style="color: #4d90fe;">Pembatalan</span></h6>
+                        <div class="faq-content">
+                            <p>Kebijakan Pembatalan: </p>
+                            <p>
+                                <ul>
+                                    <li>Pengajuan pembatalan pada hari H dikenakan biaya pembatalan sebesar 100% dari total pembayaran. </li>
+                                    <li>Pengajuan pembatalan diatas > H-1 sebelum waktu pemakaian akan dikenakan biaya pembatalan sebesar 30% dari total pembayaran.</li>
+                                    <li>Kebijakan pembatalan diatas berlaku bagi seluruh pelanggan yang sudah membayar DP.</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

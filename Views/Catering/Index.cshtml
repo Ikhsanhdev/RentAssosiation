@@ -1,0 +1,133 @@
+@{
+    Layout = "~/Views/Shared/_LayoutCatering.cshtml";
+    ViewData["Title"] = "Ayora Catering";
+}
+
+<section id="carousel" class="carousel section-bg-white">
+    <div class="container-fluid" data-aos="fade-up">
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/assets/img/carousel/cc-catering-1.jpg" class="d-block w-100" alt="Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/assets/img/carousel/car-1.jpg" class="d-block w-100" alt="Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/assets/img/carousel/cc-catering-2.jpg" class="d-block w-100" alt="Image 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/assets/img/carousel/cc-car-3.jpg" class="d-block w-100" alt="Image 4">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services section-bg-white">
+    <div class="container" data-aos="fade-up">
+        <center>
+            <h1>Ayora Putra Sekawan</h1>
+            <p>Sejak 2024 kami telah melayani catering untuk berbagai jenis acara di Kota Karawang dan sekitarnya. Jelajahi aneka pelayanan kami :</p>
+        </center> 
+
+        <div class="row justify-content-center">
+            <div class="col-md-6 d-flex justify-content-center">
+                <button type="button" class="btn btn-outline-secondary mx-2 btn-rectangle" style="width: 400px;">Catering</button>
+                <button type="button" onclick="location.href='/'" class="btn btn-outline-secondary mx-2 btn-rectangle" style="width: 400px;">Rent A Car</button>
+            </div>
+        </div><br>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6 d-flex justify-content-center">
+                <button type="button" class="btn btn-danger btn-rectangle" style="width: 750px;">Menu Lengkap</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services section-bg-white">
+    <div class="container" data-aos="fade-up">
+        <center>
+            <h1>Klien Kami</h1>
+            <p>Pelanggan setia kami termasuk pribadi, perusahaan multinasional, hingga lembaga pemerintah</p>
+            <img src="~/assets/img/clients.jpg" alt="Image 4">
+        </center>
+    </div>
+</section>
+
+<section id="stats-counter" class="stats-counter">
+    <div class="container" data-aos="zoom-out">
+        <div class="row gy-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="57" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Clients</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="127" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Projects</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Car</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Workers</p>
+                </div>
+            </div><!-- End Stats Item -->
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+            <h2>About Us</h2>
+            <p>Learn More <span>About Us</span></p>
+        </div>
+
+        <div class="row gy-4">
+            <div class="col-lg-7 position-relative about-img" style="background-image: url(/assets/img/carousel/catering-about.png) ;" data-aos="fade-up" data-aos-delay="150">
+                <div class="call-us position-absolute">
+                    <h4>Call Us On</h4>
+                    <p>+6281295554870</p>
+                </div>
+            </div>
+            <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
+                <div class="content ps-0 ps-lg-5">
+                    <p class="fst-italic">
+                        Ayora Putra Sekawan bukan sekadar perusahaan ini adalah perjalanan kebersamaan, semangat memasak, dan petualangan tak terlupakan.
+                    </p>
+                    <p>
+                        Tidak hanya menghadirkan hidangan catering dengan rasa yang memikat, tetapi juga unggul dalam penyajian dan pelayanan yang
+                        cepat. Keunggulan kami terletak juga pada pada armada mobil yang terawat dengan baik dan profesional.
+                    </p>
+                    <div class="position-relative mt-4">
+                        <img src="~/assets/img/carousel/car-2.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

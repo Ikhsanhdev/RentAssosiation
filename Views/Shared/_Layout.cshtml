@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     @* <link rel="stylesheet" href="~/RentAssosiation.styles.css" asp-append-version="true" /> *@
 
-    <link href="~/assets/img/favicon.png" rel="icon">
+    <link href="~/favicon.ico" rel="icon">
     <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Fonts -->
@@ -35,7 +35,7 @@
             <a href="index.html" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.png" alt=""> -->
-                <h1 class="sitename">UpConstruction</h1> <span>.</span>
+                <h1 class="sitename">AyoraRentCar</h1> <span>.</span>
             </a>
 
             <nav id="navmenu" class="navmenu">
@@ -45,7 +45,7 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    @* <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="#">Dropdown 1</a></li>
                             <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -61,13 +61,13 @@
                             <li><a href="#">Dropdown 3</a></li>
                             <li><a href="#">Dropdown 4</a></li>
                         </ul>
-                    </li>
+                    </li> *@
                     <li><a href="contact.html">Contact</a></li>
-                    @if (string.IsNullOrEmpty(ClaimIdentity.Username)) {
+                    @* @if (string.IsNullOrEmpty(ClaimIdentity.Username)) {
                         <li><a href="/Auth/Login">LOGIN</a></li>
                     } else {
                         <li><button type="button" class="btn btn-warning" onClick="window.location.href='/Admin'"><i class="fa-solid fa-right-to-bracket"></i> ADMIN</button></li>
-                    }
+                    } *@
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -85,7 +85,7 @@
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <a href="index.html" class="logo d-flex align-items-center">
-                        <span class="sitename">UpConstruction</span>
+                        <span class="sitename">AyoraRentCar</span>
                     </a>
                     <div class="footer-contact pt-3">
                         <p>A108 Adam Street</p>
@@ -115,11 +115,11 @@
                 <div class="col-lg-2 col-md-3 footer-links">
                     <h4>Our Services</h4>
                     <ul>
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Product Management</a></li>
+                        <li><a href="#">Rent Car</a></li>
+                        <li><a href="#">Rent Bus</a></li>
+                        @* <li><a href="#">Product Management</a></li>
                         <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">Graphic Design</a></li> *@
                     </ul>
                 </div>
 
@@ -148,13 +148,13 @@
         </div>
 
         <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">UpConstruction</strong> <span>All Rights Reserved</span></p>
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">AyoraRentCar</strong> <span>All Rights Reserved</span></p>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
                 <!-- You can delete the links only if you've purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                Designed by <a href="/">AyoraRentCar</a>
             </div>
         </div>
     </footer>
