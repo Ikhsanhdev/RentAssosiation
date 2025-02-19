@@ -40,11 +40,12 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="/Struktur">Struktur</a></li>
-                    <li><a href="/Dpp">DPP</a></li>
-                    <li><a href="blog.html">News</a></li>
+                    <li><a href="/" class="@GetActiveClass("Home")">Home</a></li>
+                    <li><a href="/About" class="@GetActiveClass("About")">About</a></li>
+                    <li><a href="/Struktur" class="@GetActiveClass("Struktur")">Struktur</a></li>
+                    <li><a href="/Dpp" class="@GetActiveClass("Dpp")">DPP</a></li>
+                    <li><a href="/blog.html" class="@GetActiveClass("News")">News</a></li>
+
                     @* <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="#">Dropdown 1</a></li>
@@ -185,3 +186,11 @@
     @await RenderSectionAsync("Styles", required: false)
 </body>
 </html>
+
+@functions {
+    string GetActiveClass(string controllerName)
+    {
+        var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+        return currentController == controllerName ? "active" : "";
+    }
+}
